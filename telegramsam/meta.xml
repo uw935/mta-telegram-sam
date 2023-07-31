@@ -1,0 +1,14 @@
+<meta>
+
+    <info author="uw935" description="Telergam Bot hosted by MTA server"/> 
+
+    <script src="main.lua" type="server" />
+    <script src="core/functions.lua" type="server" />
+    <script src="core/keyboard.lua" type="server" />
+
+    <min_mta_version server="1.5.3-9.11270"/>
+
+    <export function="BotSendRequest" type="server"/> 
+    <export function="BotLogin" type="server"/> 
+
+</meta>
