@@ -101,8 +101,9 @@ addEventHandler("onTelegramNewMessage", root, MessageHandler)
 
 2. This example shows how to work with inline keyboard [(full code)](https://github.com/uw935/mta-telegram-sam/tree/master/examples/keyboard/inline_keyboard_bot)
 ```Lua
-function Bot:SendRequest(reqName, ...) 
-    return exports["telegramsam"]:BotSendReque
+function Bot:SendRequest(reqName, ...)
+    return exports["telegramsam"]:BotSendRequest(self.key, reqName, ...)
+end
     
 
 local MyKeyboardWith4Buttons = Bot:SendRequest("InitKeyboard", "myKeyboard4but", true)

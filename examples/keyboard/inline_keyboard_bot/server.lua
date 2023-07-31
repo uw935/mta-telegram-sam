@@ -2,8 +2,8 @@ local TOKEN = ""
 local Bot = exports["telegramsam"]:BotLogin(getResourceName(getThisResource()), TOKEN) -- Login bot and registr this resource
 
 function Bot:SendRequest(reqName, ...) -- creating request function
-    return exports["telegramsam"]:BotSendReque
-    
+    return exports["telegramsam"]:BotSendRequest(self.key, reqName, ...)
+end    
 
 local MyKeyboardWith4Buttons = Bot:SendRequest("InitKeyboard", "myKeyboard4but", true)
 
