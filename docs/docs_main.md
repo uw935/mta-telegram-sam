@@ -39,7 +39,7 @@ addEventHandler("onTelegramNewMessage", root, function(message)
   exports["telegramsam"]:BotSendRequest(Bot.key, "SendMessage", message.chat.id, "Hello world!")
 end)
 ```
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/86ae0649-2ae5-4240-9344-cd7ab1a3e196)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/4e92d727-4443-49a0-966d-e7ce34d5adf3)
 
 ## onTelegramCallbackReceive
 This event triggered when new callback received from Telegram OR when it need to return the result of the callback function
@@ -61,7 +61,7 @@ addEventHandler("onTelegramNewMessage", root, function(message)
   exports["telegramsam"]:BotSendRequest(Bot.key, "SendMessage", message.chat.id, "Your just wrote me: "..message.text, false, false, false, false, {id="mycallbackdata"})
 end)
 ```
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/1fe58f37-e8b2-433b-ba70-229f8fa1a526)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/89a8beb3-11c8-485a-aa76-3c9c86221b8e)
 
 <br>
 
@@ -108,6 +108,8 @@ Note: User with this ID must write something to bot first to let bot write him
     exports["telegramsam"]:BotSendRequest(Bot.key, "SendMessage", tonumber(telegramId), "Hello!")
   end)
 ```
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/af08c645-d495-4527-91f5-db26c2d1d793)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/d30f3423-4b87-453d-983a-dac68db22d92)
 
 ## Other documentation
 + [About keyboard](https://github.com/uw935/mta-telegram-sam/blob/master/docs/docs_keyboards.md)

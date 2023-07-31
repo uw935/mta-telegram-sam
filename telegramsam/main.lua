@@ -41,7 +41,7 @@ local function TelegramConnect(respData, respCode, key)
         local respData = fromJSON(respData) 
         -- fetching telegram getMe response to table
 
-        outputDebugString("[Telegram Sam] : Succefully connected as " .. respData["result"]["first_name"], 3)
+        outputDebugString("[Telegram Sam] : Successfully connected as " .. respData["result"]["first_name"], 3)
         fetchRemote(TelegramURL .. bot[key].token .. "/getUpdates", "r"..key, 10, 5000, TelegramGetLastUpdate, "", false, key) -- fetchRemote to get last update
         return
     end

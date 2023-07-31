@@ -86,9 +86,9 @@ end
 addEventHandler("onTelegramNewMessage", root, MessageHandler)
 ```
 
-Then we can start our resource and write something to our telegram bot. Profit!
+Then we can start our resource, wait until "Successfully connected as ...", after that we can write something to our telegram bot. Profit!
 
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/e9be6d1d-4c28-4480-96b9-a904144b088d)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/00d4be64-d6d4-4858-adaa-759e7e3b0418)
 
 ## More examples
 

@@ -40,9 +40,8 @@ addEventHandler("onTelegramNewMessage", root, function(message)
   Bot:SendRequest("SendMessage", message.chat.id, message.text, false, false, false, false, {data_id="mydataid"})
 end)
 ```
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/3f7c01f7-04be-4d8e-8276-7aa1da573a1b)
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/29505fe7-8e9d-4fbc-97cd-595f9599b66c)
-
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/450159a1-0327-4306-9b73-0a5f1e7c53af)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/36892a07-75ce-48ad-8a7e-ccbc12f8feff)
 
 2. This example sends information message whenever player connect to the server
 
@@ -57,7 +56,8 @@ addEventHandler("onPlayerJoin", root, function(cData)
   Bot:SendRequest("SendMessage", admin_chat_id, "Player with name " ..getPlayerName(source).." connected!")
 end)
 ```
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/2fbf7ed9-a5b5-41e8-a53a-f9c13fa8aba2)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/87f978af-ccd9-41e2-8fba-7d6a1179b887)
+
 
 <br>
 
@@ -94,7 +94,7 @@ addEventHandler("onTelegramNewMessage", root, function(message)
   Bot:SendRequest("SendMessage", message.chat.id, message.text, false, false, false, false, {data_id="deletemymessage"})
 end)
 ```
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/a51dfa5e-dc69-4b59-9512-43721c5385ed)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/cb9f7df4-bf70-4761-9207-af714f3c7099)
 
 <br>
 
@@ -123,7 +123,7 @@ addEventHandler("onTelegramNewMessage", root, function(message)
   Bot:SendRequest("SendPhoto", message.chat.id, "https://krot.info/uploads/posts/2021-12/1638467709_46-krot-info-p-peizazhi-prirodi-rossii-krasivie-foto-49.jpg", false, false, message.message_id)
 end)
 ```
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/2625d9e8-0fe8-4227-830d-e6cf5b6394cb)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/551ab2fa-1f8f-4497-8640-ed21147a40c6)
 
 <br>
 
@@ -143,14 +143,14 @@ Returns [Telegram message type](https://core.telegram.org/bots/api#message) at c
 ### Example
 This example edits message whenever player quit from server (onPlayerQuit)
 ```Lua
-local admin_id = 815371016
+local admin_id = 111
 local message_id = nil 
 
 function Bot:SendRequest(functionName, ...)
   return exports["telegramsam"]:BotSendRequest(self.key, functionName, ...)
 end
 
-Bot:SendRequest("SendMessage", 815371016, "This message will edited", false, false, false, false, {id="editmessage"})
+Bot:SendRequest("SendMessage", admin_id, "This message will edited", false, false, false, false, {id="editmessage"})
 
 addEventHandler("onTelegramCallbackReceive", root, function(callbackData)
   if callbackData.callback_data.id == "editmessage" then 
@@ -163,7 +163,8 @@ addEventHandler("onPlayerQuit", root, function()
   Bot:SendRequest("EditMessage", admin_id, message_id, "Player with nickname "..getPlayerName(source).." has quit for some reason")
 end)
 ```
-![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/e3b87a39-fa24-4574-9239-c169d59d48a1)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/295c4491-048e-4c75-bb35-3df8cd1a1f72)
+![image](https://github.com/uw935/mta-telegram-sam/assets/74175088/595d9268-a07c-4748-b88a-47a03d00c8be)
 
 <br>
 
